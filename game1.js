@@ -77,20 +77,17 @@ startGame.addEventListener("click",()=>{
 
 // getBoundingClientRect()
 
+
 function randomPosition(elem){
   const y= blankBoxImg.clientHeight;
   const x= blankBoxImg.clientWidth;
   console.log( "position",y,x);
-  //Math.random() * (max - min) + min;
    const randomY=Math.random()*y;
   const randomX=Math.random()*x;
-  // const randomY=Math.random()*(max - min) + min;
-  // const randomX=Math.random()*(max - min) + min;
   elem.style.top=randomY+"px";
   elem.style.left= randomX+"px";
 
 }
-
 function removeImage(event){
   event.target.remove();
   scoreDiv.innerHTML= ++score;
